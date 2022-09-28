@@ -59,7 +59,7 @@ def setup(args):
     # Prepare model
     config = CONFIGS[args.model_type]
 
-    num_classes = 10
+    num_classes = 100
 
     model = MlpMixer(config, args.img_size, num_classes=num_classes, patch_size=16, zero_head=True, learning_rule=args.learning_rule)
     model.load_from(np.load(args.pretrained_dir))
