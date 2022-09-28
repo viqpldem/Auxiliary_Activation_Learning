@@ -81,15 +81,15 @@ x = self.linear(x)
 
 ## Example
 
-[ResNet](https://github.com/asdfasgqergadsad/AuxiliaryActivationLearning/tree/main/experiments/ResNet)
+[ResNet](https://github.com/asdfasgqergadsad/Auxiliary_Activation_Learning/tree/main/experiments/ResNet)
 
-[Transformer](https://github.com/asdfasgqergadsad/AuxiliaryActivationLearning/tree/main/experiments/Transformer)
+[Transformer](https://github.com/asdfasgqergadsad/Auxiliary_Activation_Learning/tree/main/experiments/Transformer)
 
-[BERT_L](https://github.com/asdfasgqergadsad/AuxiliaryActivationLearning/tree/main/experiments/BERT_L)
+[BERT_L](https://github.com/asdfasgqergadsad/Auxiliary_Activation_Learning/tree/main/experiments/BERT_L)
 
-[ViT_L](https://github.com/asdfasgqergadsad/AuxiliaryActivationLearning/tree/main/experiments/ViT_L)
+[ViT_L](https://github.com/asdfasgqergadsad/Auxiliary_Activation_Learning/tree/main/experiments/ViT_L)
 
-[MLP-Mixer_L](https://github.com/asdfasgqergadsad/AuxiliaryActivationLearning/tree/main/experiments/MLP-Mixer_L)
+[MLP-Mixer_L](https://github.com/asdfasgqergadsad/Auxiliary_Activation_Learning/tree/main/experiments/MLP-Mixer_L)
 
 
 ## Results
