@@ -24,11 +24,11 @@ def get_loader(args):
         transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
     ])
 
-    trainset = datasets.CIFAR10(root="./data",
+    trainset = datasets.CIFAR100(root="./data",
                                 train=True,
                                 download=True,
                                 transform=transform_train)
-    testset = datasets.CIFAR10(root="./data",
+    testset = datasets.CIFAR100(root="./data",
                                 train=False,
                                 download=True,
                                 transform=transform_test) if args.local_rank in [-1, 0] else None
