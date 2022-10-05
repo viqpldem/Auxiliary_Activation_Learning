@@ -5,7 +5,7 @@ import os, sys
 import torch
 import mesa as ms
 import torch.nn as nn
-from aal.Auxiliary_Activation_Learning import Linear_ASA
+from aal.aal import Linear_ASA
 
 def read_policy(filename, section='init', debug=False, verbose=print):
     if not os.path.isfile(filename):
