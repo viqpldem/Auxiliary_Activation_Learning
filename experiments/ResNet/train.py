@@ -151,8 +151,8 @@ def main():
             transforms.ToTensor(),
             transforms.Normalize(mean, std)])
         num_workers = 4 * len(args.device)
-        trainset = torchvision.datasets.ImageFolder(args.imagenet_data_path, transform=transform_train)
-        testset = torchvision.datasets.ImageFolder(args.imagenet_data_path, transform=transform_test)
+        trainset = torchvision.datasets.ImageFolder(args.imagenet_data_path+'/train', transform=transform_train)
+        testset = torchvision.datasets.ImageFolder(args.imagenet_data_path+'/val', transform=transform_test)
         trainloader = torch.utils.data.DataLoader(trainset, batch_size=args.batch_size, shuffle=True,
                                               num_workers=num_workers)
         testloader = torch.utils.data.DataLoader(testset, batch_size=args.test_batch_size, shuffle=False,
