@@ -9,7 +9,7 @@ from actnn.layers import QConv1d, QConv2d, QConv3d, QConvTranspose1d, QConvTrans
     QBatchNorm1d, QBatchNorm2d, QBatchNorm3d, QSyncBatchNorm, \
     QReLU, QDropout, QLinear, QMaxPool2d, QAvgPool2d
 from actnn.conf import config
-from actnn.all_actnn import Conv2d_ARA_Actnn
+from actnn.aal_actnn import Conv2d_ARA_Actnn
 from aal.aal import Conv2d_ARA, Conv2d_ASA
 
 
