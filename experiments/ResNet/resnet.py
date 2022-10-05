@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.checkpoint import checkpoint
-from aal.Auxiliary_Activation_Learning import Conv2d_ARA, Conv2d_ASA, Distribute_ARA
+from aal.aal import Conv2d_ARA, Conv2d_ASA, Distribute_ARA
 from actnn.aal_actnn import Conv2d_ARA_Actnn, Distribute_ARA_Actnn
 from aal.custom_layer import BatchNorm2d, ReLU, BnReLUConv, BnReLUConvBn, ConvBn_ARA
 from actnn.ops import quantize_activation
