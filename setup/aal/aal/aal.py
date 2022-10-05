@@ -2,8 +2,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import math
-from packbits import packbits_one_bits, unpackbits_one_bits
-
 import aal.cudnn_conv as cudnn_convolution
 import aal.make_asa as make_asa
 
