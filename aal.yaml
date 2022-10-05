@@ -78,8 +78,8 @@ dependencies:
     - click==8.1.3
     - contextlib2==21.6.0
     - cymem==2.0.6
-    - de-core-news-sm==2.3.0
-    - en-core-web-sm==2.3.1
+    - https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz#egg=en_core_web_sm
+    - https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-2.3.0/de_core_news_sm-2.3.0.tar.gz#egg=de_core_news_sm
     - gitdb==4.0.9
     - gitpython==3.1.27
     - google-auth==2.11.1
@@ -111,7 +111,7 @@ dependencies:
     - tensorboard-data-server==0.6.1
     - tensorboard-plugin-wit==1.8.1
     - thinc==7.4.5
-    - warmup-scheduler==0.3.2
+    - git+https://github.com/ildoonet/pytorch-gradual-warmup-lr.git
     - wasabi==0.10.1
     - werkzeug==2.2.2
     - zipp==3.8.1
