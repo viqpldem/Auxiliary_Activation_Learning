@@ -11,7 +11,7 @@ python train.py --batch_size 4096 --dataset_name IWSLT --language_direction G2E 
 
 + For training by ASA4 in Transformer with Mesa
 ```bash
-python train.py --batch_size 4096 --dataset_name IWSLT --language_direction G2E --learning_rule asa4 --mesa --mesa_policy PATH --device 0
+python train.py --batch_size 4096 --dataset_name IWSLT --language_direction G2E --learning_rule asa4 --mesa True --dataset_path DATA_PATH --mesa_policy POLICY_PATH --device 0
 ```
 
 # Acknowledgments
