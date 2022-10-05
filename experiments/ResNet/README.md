@@ -6,17 +6,17 @@ We prepaired Tiny-ImageNet and IWSLT-2016 as follow: [data](https://drive.google
 
 + For training by ARA (3,4,2,2) in ResNet-152 on ImageNet
 ```bash
-python train.py --dataset imagenet --model resnet152 --learning-rule ara --ARA-stride 3 4 2 2 --device 0 1 2 --imgenet_data_path PATH
+python train.py --dataset imagenet --model resnet152 --learning-rule ara --ARA-stride 3 4 2 2 --device 0 1 2 --imagenet_data_path PATH
 ```
 
 + For training by ARA (3,4,2,2) with GCP
 ```bash
-python train.py --dataset imagenet --model resnet152 --learning-rule ara --ARA-stride 3 4 2 2 --device 0 1 2 --imgenet_data_path PATH --gcp
+python train.py --dataset imagenet --model resnet152 --learning-rule ara --ARA-stride 3 4 2 2 --device 0 1 2 --imagenet_data_path PATH --gcp
 ```
 
 + For training by ARA (3,4,2,2) with ActNN
 ```bash
-python train.py --dataset imagenet --model resnet152 --learning-rule ara --ARA-stride 3 4 2 2 --device 0 1 2 --imgenet_data_path PATH --actnn
+python train.py --dataset imagenet --model resnet152 --learning-rule ara --ARA-stride 3 4 2 2 --device 0 1 2 --imagenet_data_path PATH --actnn
 ```
 
 # Acknowledgments
