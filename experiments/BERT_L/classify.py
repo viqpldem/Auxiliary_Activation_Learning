@@ -7,7 +7,7 @@ import fire
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from Auxiliary_Activation_Learning import Linear_ASA
+from aal.aal import Linear_ASA
 
 
 import tokenization
@@ -209,7 +209,7 @@ def main(task='mrpc',
          learning_rule='bp',
          gcp=False,
          mesa=False,
-         mesa_policy=PATH
+         mesa_policy='path'
          ):
 
     cfg = train.Config.from_json(train_cfg)
