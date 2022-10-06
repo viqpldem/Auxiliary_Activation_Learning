@@ -20,7 +20,7 @@ from models.modeling import MlpMixer, CONFIGS
 from utils.scheduler import WarmupLinearSchedule, WarmupCosineSchedule
 from utils.data_utils import get_loader
 from utils.dist_utils import get_world_size
-from Auxiliary_Activation_Learning import Linear_ASA 
+from aal.aal import Linear_ASA 
 
 
 logger = logging.getLogger(__name__)
@@ -82,8 +82,7 @@ def set_seed(args):
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
-    if args.n_gpu > 0:
-        torch.cuda.manual_seed_all(args.seed)
+    torch.cuda.manual_seed_all(args.seed)
 
 
 def valid(args, model, writer, test_loader, global_step):
