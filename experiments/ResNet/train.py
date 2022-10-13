@@ -223,7 +223,7 @@ def main():
             outputs, li = net(inputs)
             torch.cuda.synchronize()
             post_allocated = torch.cuda.memory_allocated(args.device[0])/ 1024 /1024  
-            act_mem = (post_allocated-pre_allocated)*len(args.device)
+            act_mem = post_allocated-pre_allocated
             loss = criterion(outputs, targets) 
             loss.backward()
             optimizer.step()
