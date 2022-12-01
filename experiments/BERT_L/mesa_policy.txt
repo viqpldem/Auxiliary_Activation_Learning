@@ -4,8 +4,6 @@ on fc: # layer tag, choices: fc, conv, gelu, bn, relu, softmax, matmul, layernor
   level: 256 # we adopt 8-bit quantization by default
   ema_decay: 0.9 # the decay rate for running estimates
 
-
-
 on softmax: # layer tag, choices: fc, conv, gelu, bn, relu, softmax, matmul, layernorm
   by_index: all # layer index
   enable: True # enable for compressing
