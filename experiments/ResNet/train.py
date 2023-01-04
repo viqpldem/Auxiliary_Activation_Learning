@@ -46,9 +46,9 @@ parser.add_argument('--tiny_imagenet_data_path', type=str, help='The path to the
 
 def main():
     args = parser.parse_args()
-    device = args.device
-    if type(device) != int:
-        device = args.device[0]
+    device = args.device[0]
+    if len(args.device) == 1:
+        torch.cuda.set_device(device)
     best_acc = 0  # best test accuracy
     start_epoch = 0  # start from epoch 0 or last checkpoint epoch
     
@@ -185,7 +185,7 @@ def main():
         net.load_state_dict({k.replace('module.model.',''):v for k,v in state_dict.items()})
     
         
-    if type(args.device) != int:
+    if len(args.device) != 1:
         net = nn.DataParallel(net, device_ids=args.device) 
         net = net.to(device)
     else:
@@ -221,7 +221,6 @@ def main():
             optimizer.zero_grad()
             pre_allocated = torch.cuda.memory_allocated(args.device[0]) / 1024 /1024
             outputs, li = net(inputs)
-            torch.cuda.synchronize()
             post_allocated = torch.cuda.memory_allocated(args.device[0])/ 1024 /1024  
             act_mem = post_allocated-pre_allocated
             loss = criterion(outputs, targets) 
